@@ -1,1 +1,5 @@
-
+<div>
+  <input [(ngModel)]="newTaskTitle" type="text" placeholder="Enter a new task...">
+  <p>{{ newTaskTitle() }}</p>
+  <button (click)="addTaskHandler(newTaskTitle())">Add Task</button>
+</div>
