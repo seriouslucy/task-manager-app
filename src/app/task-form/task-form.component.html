@@ -1,5 +1,12 @@
 <div>
   <input [(ngModel)]="newTaskTitle" type="text" placeholder="Enter a new task...">
+
+  <select [(ngModel)]="newPriority">
+    <option value="low">Low</option>
+    <option value="medium">Medium</option>
+    <option value="urgent">High</option>
+  </select>
+
+  <button (click)="addTaskHandler(newTaskTitle(), newPriority())">Add Task</button>
   <p>{{ newTaskTitle() }}</p>
-  <button (click)="addTaskHandler(newTaskTitle())">Add Task</button>
 </div>

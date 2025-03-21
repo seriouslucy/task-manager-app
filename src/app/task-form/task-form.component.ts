@@ -13,11 +13,12 @@ export class TaskFormComponent {
   tasks = this.taskService.tasks
 
   newTaskTitle = signal<string>('')
+  newPriority = signal<'low' | 'medium' | 'high'>('low')
 
-  addTaskHandler(title: string) {
+  addTaskHandler(title: string, priority: 'low' | 'medium' | 'high') {
 
     if (title) {
-    this.taskService.addTask(this.newTaskTitle())
+    this.taskService.addTask(this.newTaskTitle(), priority)
 } else {
   alert('You need to enter something')
 }
