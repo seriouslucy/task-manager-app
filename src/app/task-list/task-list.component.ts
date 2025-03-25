@@ -1,15 +1,13 @@
 // task-list.component.ts
 import { Component, inject, signal } from '@angular/core';
-import { TaskComponent } from "../task/task.component";
 import { TaskService } from '../shared/services/task.service';
-import { EditFormComponent } from "../edit-form/edit-form.component";
-import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-task-list',
+  standalone: false,
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.css'],
-  imports: [TaskComponent, EditFormComponent, FormsModule]
 })
 export class TaskListComponent {
 
@@ -41,7 +39,7 @@ currentTitle = signal('')
   }
 
   isChecked() {
-    
+
   }
 
 

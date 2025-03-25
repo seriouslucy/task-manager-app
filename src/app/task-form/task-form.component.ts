@@ -1,10 +1,9 @@
 import { Component, inject, signal } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { TaskService } from '../shared/services/task.service';
 
 @Component({
   selector: 'app-task-form',
-  imports: [FormsModule],
+  standalone: false,
   templateUrl: './task-form.component.html',
   styleUrl: './task-form.component.css'
 })
